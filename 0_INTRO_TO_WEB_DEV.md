@@ -54,8 +54,14 @@
         </table>
         ```
         <table><tr><td>(0,0)</td><td>(1,0)</td></tr><tr><td>(0,1)</td><td>(1,1)</td></tr></table>
+    - Bold: `strong`
+    - Italic: `em`
 ### Coments
 - 
     ```
     <!-- this is a comment-->
     ```
+### HTML Attributes
+### HTML Class
+- Classes are special attributes that can go on any tag
+- Go with CSS and JavaScript

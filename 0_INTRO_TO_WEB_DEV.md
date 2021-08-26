@@ -65,3 +65,32 @@
 ### HTML Class
 - Classes are special attributes that can go on any tag
 - Go with CSS and JavaScript
+- Can have multiple classes \
+`class="post featured-post"`
+### HTML IDs
+- ID need to be unique, the only one on the page
+- IDs are useful for linking, deep link directly to that point in the page
+### Naming and Semantics
+- Name things after what it does, not what it looks like
+- HTML: kebab case; CSS: camel case
+### Meta HTML
+- Boilerplate
+    ```
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>My amazing HTML Document</title>
+    </head>
+    <body>
+        <h1>Check this out</h1>
+        <!-- Your amazing HTML here -->
+    </body>
+    </html>
+    ```
+- `<script></script>`, `<style></style>`, and `<link />`
+    - `<script></script>` links JavaScript into HTML
+    - `<style></style>` and `<link />` bring in CSS
+
+## Learning CSS
+### Introducing CSS
+- rules

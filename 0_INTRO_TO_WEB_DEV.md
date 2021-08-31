@@ -56,7 +56,7 @@
         <table><tr><td>(0,0)</td><td>(1,0)</td></tr><tr><td>(0,1)</td><td>(1,1)</td></tr></table>
     - Bold: `strong`
     - Italic: `em`
-### Coments
+### Comments
 - 
     ```
     <!-- this is a comment-->
@@ -94,3 +94,22 @@
 ## Learning CSS
 ### Introducing CSS
 - rules
+- 
+    ```
+    h1 {
+        color: limegreen;
+        font-size: 60px;
+        font-weight: normal;
+        text-decoration: underline;
+        text-transform: uppercase;
+        border: 3px solid pink;
+    }
+    ```
+    - `h1` -> the selector
+    - `color` -> property
+    - `limegreen` -> value
+    - `font-weight` -> bold/normal/light
+    - `text-decoration` -> underline/line-through/overline
+    - `text-transform` -> uppercase/lowercase/capitalize
+### Parents & Children
+- 

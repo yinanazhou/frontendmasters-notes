@@ -114,4 +114,12 @@
 ### Parents & Children
 ### CSS Playground
 - Codepen: https://codepen.io/btholt/pen/ELaxOB
-
+### CSS Selectors & Cascade
+- `.<class name>` or `tag`
+- Always style on classes, don't style on tags
+- In CSS, when two rules points to the same class
+    - The one that comes the last wins
+    - Property by property
+    - The more specific one wins
+        - e.g. `.main-brand-3.title-3`
+    - **Class > tags:** classes are more specific than tags

@@ -16,31 +16,31 @@
 - Types of Tags
     - Headings: `h1` - `h6`
     - Paragraph: `p` (only text goes in p tags)
-    - Anchor: `a` (a link to somewhere else) \
+    - Anchor: `a` (a link to somewhere else)
         ```
         <a href="link">Text</a>
         ```
     - Division: `div` (cardboard box)
     - Span: `span` (ziploc bag, a container for small pieces of text)
-    - List: `ol` & `ul` (ordered & unordered), li (item insise the list)
+    - List: `ol` & `ul` (ordered & unordered), li (item inside the list)
     - Button: `button` 
-    - Image: `img` \
+    - Image: `img`
         ```
         <img src="location" alt="descriptive content"/>
         ```
-        - content: `img` tag```
+        - content: `img` tag
         - background/decorative: css
     - Browser input: `input`
         - default: text
     - More text: `textarea`
         - not self closing
-    - Dropdown menu: `select` & `option`\
+    - Dropdown menu: `select` & `option`
         ```
         <select><option value="option1">option1</option><option value="option2">option2</option></select>
         ```
         - `value`: send back to the server
     - Group tags: `form` (a container for data from a user input)
-    - Tables: `table`, `tr` (one row), `td` (one cell) \
+    - Tables: `table`, `tr` (one row), `td` (one cell)
         ```
         <table>
             <tr>
@@ -57,10 +57,7 @@
     - Bold: `strong`
     - Italic: `em`
 ### Comments
-- 
-    ```
-    <!-- this is a comment-->
-    ```
+`<!-- this is a comment-->`
 ### HTML Attributes
 ### HTML Class
 - Classes are special attributes that can go on any tag
@@ -115,7 +112,7 @@
 ### CSS Playground
 - Codepen: https://codepen.io/btholt/pen/ELaxOB
 ### CSS Selectors & Cascade
-- `.<class name>` or `tag`
+- `.<class name>` or `tag` or `#<ID name>`
 - Always style on classes, don't style on tags
 - In CSS, when two rules points to the same class
     - The one that comes the last wins
@@ -123,3 +120,36 @@
     - The more specific one wins
         - e.g. `.main-brand-3.title-3`
     - **Class > tags:** classes are more specific than tags
+### IDs
+- `!important` > ID > Class + tag
+### Comment in CSS
+`/* anything between this is a comment */`
+### Pseudoclasses
+- ```
+    <style>
+      .hover-example {
+        width: 100px;
+        height: 100px;
+        background-color: limegreen;
+        color: white;
+      }
+      .hover-example:hover { \\ this is pseudoclass
+        background-color: crimson;
+        width: 150px;
+        height: 150px;
+      }
+    </style>
+    <div class="hover-example">Hover your mouse over me</div>
+    ```
+- Specificity == class
+- In list:
+    - first-child
+    - nth-child(2)
+    - nth-child(2n + 1) -> odd numbers
+    - last-child
+### Pseudoelements
+### Wildcard Selector
+- `*`: everything
+### CSS Specificity Guide
+- CSS SpeciFISHity guide: http://www.standardista.com/css3/css-specificity/
+### CSS Box Model

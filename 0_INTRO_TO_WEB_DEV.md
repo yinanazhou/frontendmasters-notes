@@ -153,3 +153,18 @@
 ### CSS Specificity Guide
 - CSS SpeciFISHity guide: http://www.standardista.com/css3/css-specificity/
 ### CSS Box Model
+#### Display
+- div -> display: block
+- span -> display: inline
+- inline-block
+- flex & inline-flex
+- grid & inline-grid
+- table: use table in html instead
+#### Height, Width, Padding, Border, and Margin
+- Order: interior content -> padding -> border -> margin
+- Trick: for every website
+    ```buildoutcfg
+    * {
+        box-sizing: border-box; // make box size include border
+    }
+### CSS Floats & Flexbox

@@ -168,3 +168,81 @@
         box-sizing: border-box; // make box size include border
     }
 ### CSS Floats & Flexbox
+- ```
+  .floated .box{ //all the box inside floated
+    float: left;
+  }
+  ```
+- float: cannot go higher than the previous box
+- flex: works on the parent container
+    - ```
+        <style>
+          .jc-center {
+            justify-content: flex-end; //everything to the right as far as possible
+          }
+        </style>
+      ```
+    - by default, no wrap
+    - `justify-content`
+        <table>
+            <tr>
+                <td>`justify-content: flex-start`</td>
+                <td>everything to the left (default)</td>
+            </tr>
+            <tr>
+                <td>`justify-content: flex-end`</td>
+                <td>everything to the right</td>
+            </tr>
+            <tr>
+                <td>`justify-content: center`</td>
+                <td>everything to the middle</td>
+            </tr>
+            <tr>
+                <td>`justify-content: space-between`</td>
+                <td>evenly spaced (no space at beginning and end)</td>
+            </tr>
+            <tr>
+                <td>`justify-content: space-around`</td>
+                <td>space: half, one, half</td>
+            </tr>
+            <tr>
+                <td>`justify-content: space-evenly`</td>
+                <td>evenly spaced (space at beginning and end</td>
+            </tr>
+        </table>
+    - `align-items`
+        <table>
+            <tr>
+                <td>`align-items: flex-start`</td>
+                <td>everything to the top (default)</td>
+            </tr>
+            <tr>
+                <td>`align-items: flex-end`</td>
+                <td>everything to the bottom</td>
+            </tr>
+            <tr>
+                <td>`align-items: center`</td>
+                <td>everything to the vertical middle</td>
+            </tr>
+            <tr>
+                <td>`align-items: stretch`</td>
+                <td>stretch the box to the assigned `height` or the highest height</td>
+            </tr>
+        </table>
+### Effective Patterns for Writing CSS
+#### Connecting CSS and HTML
+- in `index.html`
+  ```
+    <html lang="en">
+    <head>
+      <title>My amazing HTML Document</title>
+      <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+      <h1 class="my-brand">Check this out</h1>
+      <!-- Your amazing HTML here -->
+    </body>
+    </html>
+  ```
+#### When to Actually Use the Cascade
+- when share most of the styles, cascade for small details 

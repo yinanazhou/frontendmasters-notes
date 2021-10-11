@@ -245,4 +245,48 @@
     </html>
   ```
 #### When to Actually Use the Cascade
-- when share most of the styles, cascade for small details 
+- when share most of the styles, cascade for small details
+
+## Learning JavaScript
+### Programming Fundamentals
+- `const` indicates **unchanging** value
+### Numbers, Strings, and Booleans
+- String
+    - Single quote, double quote, or back tick
+    - Strings can be concatenated using `+`
+    - Template string: 
+        - Use bakctick
+        - e.g. ``const sentenceWithTemplate = `Hello ${firstName} ${lastName}! How are you?\` ``
+    
+- Comments
+    - `// this is a comment`
+    - `/* this is a comment */`
+    
+- Booleans: `true` or `false`
+- Numbers: only one type of number in JS
+### Control Flow
+- ```
+  if (condition) {
+  statement;
+  } else {
+  statement;
+  }``` 
+- always use `===`, `==` can compare string with number
+- `!==` is not equal to
+### Loops
+- `let` indicates **changing** values
+- while loop:
+  ```
+  let friends = 0;
+  with (friends < 10) {
+  friends = friends + 1;
+  }
+  ```
+- for loop:
+  ```
+  let friends = 0;
+  for (let i = 0; i <= 10; i++) {
+  friends = friends + 1;
+  }
+  ```
+

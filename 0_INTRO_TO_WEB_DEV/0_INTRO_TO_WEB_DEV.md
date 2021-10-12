@@ -289,4 +289,14 @@
   friends = friends + 1;
   }
   ```
+### Functions
+### Scope
+- reference error
+### Builtins
+- String
+    - .toLowerCase()
+    - .toUpperCase()
+    - .substr(start_index, number_of_characeter)
+- Math.
+### Objects & Arrays
 

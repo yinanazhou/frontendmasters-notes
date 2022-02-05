@@ -17,7 +17,7 @@
     - Headings: `h1` - `h6`
     - Paragraph: `p` (only text goes in p tags)
     - Anchor: `a` (a link to somewhere else)
-        ```
+        ```buildoutcfg
         <a href="link">Text</a>
         ```
     - Division: `div` (cardboard box)
@@ -25,7 +25,7 @@
     - List: `ol` & `ul` (ordered & unordered), li (item inside the list)
     - Button: `button` 
     - Image: `img`
-        ```
+        ```buildoutcfg
         <img src="location" alt="descriptive content"/>
         ```
         - content: `img` tag
@@ -35,13 +35,13 @@
     - More text: `textarea`
         - not self closing
     - Dropdown menu: `select` & `option`
-        ```
+        ```buildoutcfg
         <select><option value="option1">option1</option><option value="option2">option2</option></select>
         ```
         - `value`: send back to the server
     - Group tags: `form` (a container for data from a user input)
     - Tables: `table`, `tr` (one row), `td` (one cell)
-        ```
+        ```buildoutcfg
         <table>
             <tr>
                 <td>(0,0)</td>
@@ -92,7 +92,7 @@
 ### Introducing CSS
 - rules
 - 
-    ```
+    ```buildoutcfg
     h1 {
         color: limegreen;
         font-size: 60px;
@@ -125,7 +125,7 @@
 ### Comment in CSS
 `/* anything between this is a comment */`
 ### Pseudoclasses
-- ```
+- ```buildoutcfg
     <style>
       .hover-example {
         width: 100px;
@@ -168,14 +168,14 @@
         box-sizing: border-box; // make box size include border
     }
 ### CSS Floats & Flexbox
-- ```
+- ```buildoutcfg
   .floated .box{ //all the box inside floated
     float: left;
   }
   ```
 - float: cannot go higher than the previous box
 - flex: works on the parent container
-    - ```
+    - ```buildoutcfg
         <style>
           .jc-center {
             justify-content: flex-end; //everything to the right as far as possible
@@ -232,7 +232,7 @@
 ### Effective Patterns for Writing CSS
 #### Connecting CSS and HTML
 - in `index.html`
-  ```
+  ```buildoutcfg
     <html lang="en">
     <head>
       <title>My amazing HTML Document</title>
@@ -265,7 +265,7 @@
 - Booleans: `true` or `false`
 - Numbers: only one type of number in JS
 ### Control Flow
-- ```
+- ```buildoutcfg
   if (condition) {
   statement;
   } else {
@@ -276,14 +276,14 @@
 ### Loops
 - `let` indicates **changing** values
 - while loop:
-  ```
+  ```buildoutcfg
   let friends = 0;
   with (friends < 10) {
   friends = friends + 1;
   }
   ```
 - for loop:
-  ```
+  ```buildoutcfg
   let friends = 0;
   for (let i = 0; i <= 10; i++) {
   friends = friends + 1;
@@ -299,4 +299,155 @@
     - .substr(start_index, number_of_characeter)
 - Math.
 ### Objects & Arrays
+- Object
+    - ```buildoutcfg
+      const person = {
+          name: "Brian Holt",   // a value
+          city: "Seattle",
+          state: "WA",
+          favoriteFood: "🌮",
+          wantsTacosRightNow: true,
+          numberOfTacosWanted: 100
+      };
+      ```
+    - person.name / person["name"]
+    - objects can have objects, functions
+    
+### Context
+- Use `this` to refer to the object
 
+### Arrays
+- Ordered collections of data 
+- Starts with zero
+- Builtins:
+    - `length`
+    - `join()`
+    - `push()` // add at the end
+    - `unshift()` // add in the front
+    - `forEach()` // loop for each item
+    
+### Document Object Model (DOM)
+- The bridge between JavaScript and HTML/CSS
+- kebab in CSS == camel in JavaScript
+-   ```buildoutcfg
+    <ul>
+      <li class="js-target">Unchanged</li>
+      <li class="js-target">Unchanged</li>
+      <li>Won't Change</li>
+      <li class="js-target">Unchanged</li>
+      <li>Won't Change</li>
+      <li class="js-target">Unchanged</li>
+    </ul>
+    <script>
+      const elementsToChange = document.querySelectorAll('.js-target');
+      for (let i = 0; i < elementsToChange.length; i++) {
+        const currentElement = elementsToChange[i];
+        currentElement.innerText = "Modified by JavaScript!";
+      }
+    </script>
+    ```
+
+### Events & Listeners
+-   ```buildoutcfg
+    <button class="event-button">Click me!</button>
+    <script>
+      const button = document.querySelector('.event-button');
+      button.addEventListener('click', function () {
+        alert("Hey there!");
+      });
+    </script>
+    ```
+    - `addEventListener`: wait for the event to happen, and run `function()`
+    - `function()` is called a **callback** because it gets called back whenever the event happens
+    - `alert` is a pop up window
+-   ```buildoutcfg
+    <input placeholder="type into me!" class="input-to-copy" />
+    <p class="p-to-copy-to">Nothing has happened yet.</p>
+    <script>
+      const input = document.querySelector('.input-to-copy');
+      const paragraph = document.querySelector('.p-to-copy-to');
+    
+      input.addEventListener("keyup", function() {
+        paragraph.innerText  = input.value;
+      });
+    </script>
+    ```
+    -  `keydown` is always one key behind
+    
+-   ```buildoutcfg
+    <style>
+      .color-box {
+        background-color: limegreen;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+    <div class="color-box"></div>
+    <input class="color-input" placeholder="Type a color here!" />
+    <script>
+      const input = document.querySelector('.color-input');
+      const paragraph = document.querySelector('.color-box');
+    
+      input.addEventListener("change", function() {
+        paragraph.style.backgroundColor  = input.value;
+      });
+    </script>
+    ```
+    - `change`: a change event happens whenever you unfocus an input (click off it)
+    
+### Event Delegation
+- Do one event listener for all
+-   ```buildoutcfg
+    <div class="button-container">  
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>     
+    </div>
+    <script>
+      document.querySelector('.button-container').addEventListener('click', function(event) {        
+        alert(`You clicked on button ${event.target.innerText}`);
+      });           
+    </script>
+    ```
+    - if click on blank next to the buttons, you still click on `button-container`, so the innertext of all the buttons will be printed out
+        -   ```buildoutcfg
+            <div class="button-container">  
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>     
+            </div>
+            <script>
+              document.querySelector('.button-container').addEventListener('click', function(event) {
+                if (event.target.tagName === 'button') {
+                    alert(`You clicked on button ${event.target.innerText}`);
+                };
+              });           
+            </script>
+            ```                                                        
+    - to prevent event bubbling even further, use `event.stopPropagation()`
+        -   ```buildoutcfg
+            <div class="button-container">  
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>     
+            </div>
+            <script>
+                document.querySelector('.button-container').addEventListener('click', function(event) {
+                    if (event.target.tagName === 'button') {
+                        alert(`You clicked on button ${event.target.innerText}`);
+                    };
+                });  
+                event.stopPropagation();         
+            </script>
+            ```
+            
+### JavaScript, HTML, and CSS Exercise
+### Ajax
+- 
+    
